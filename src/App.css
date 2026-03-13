@@ -1,0 +1,19 @@
+#root {
+  max-width: 100%;
+}
+
+
+body{
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+}
+
+button:not([disabled]):hover{
+  cursor: pointer;
+}
+
+.hero-image{
+  -webkit-mask-image: radial-gradient(circle at top right, transparent 60px, black 22px);
+  mask-image: radial-gradient(circle at top right, transparent 60px, black 22px);
+
+}

@@ -1,0 +1,453 @@
+NV CONSULTATIONS WEBSITE STRUCTURE PLAN
+======================================
+
+Website Name
+NV Consultations – Dr. Navin’s Diabetes Care
+
+Location
+Kolathur, Chennai
+
+Primary Focus
+Diabetes Care
+Preventive Healthcare
+Lifestyle Disease Management
+
+
+---------------------------------------
+WEBSITE PAGE STRUCTURE
+---------------------------------------
+
+Main Pages (Minimal Professional Clinic Website)
+
+1. Home
+2. About
+3. Services
+4. Contact
+
+Additional Pages (Footer / Legal)
+
+5. Privacy Policy
+6. Terms and Conditions
+7. Medical Disclaimer
+8. Appointment Policy
+9. Cancellation & Rescheduling Policy
+
+
+---------------------------------------
+NAVIGATION MENU
+---------------------------------------
+
+Home
+About
+Services
+Contact
+
+CTA Button
+Book Appointment / Call Now
+
+
+---------------------------------------
+HOMEPAGE BLUEPRINT
+---------------------------------------
+
+SECTION 1 — HERO SECTION
+
+Title
+NV Consultations – Dr. Navin’s Diabetes Care
+
+Subtitle
+Comprehensive Diabetes and Preventive Healthcare in Kolathur, Chennai
+
+Description
+Providing expert diabetes management, preventive health services, and personalized medical care to help patients lead healthier lives.
+
+Highlight Points
+
+✔ Diabetes Care & Blood Sugar Management
+✔ Hypertension & Metabolic Health
+✔ Thyroid Disorder Management
+✔ Preventive Health Check-ups
+✔ Lifestyle & Diet Guidance
+
+CTA Buttons
+
+Book Appointment
+View Services
+
+
+---------------------------------------
+
+SECTION 2 — ABOUT CLINIC
+
+Content Source
+"Why Choose NV Consultations"
+
+Purpose
+Introduce clinic philosophy and approach.
+
+Sections
+
+Why Choose NV Consultations
+
+Experienced Diabetes Care Team
+
+Comprehensive Diabetes Management
+
+Preventive Health Focus
+
+Patient-Centred Approach
+
+Access to Multispecialty Care
+
+Integrated Pharmacy Support
+
+Community Health Commitment
+
+Trusted Diabetes Care in Kolathur, Chennai
+
+
+---------------------------------------
+
+SECTION 3 — DOCTORS
+
+Doctor 1
+
+Dr. R. Navin
+Director & Consultant Diabetologist – NV Consultations, Kolathur, Chennai
+
+Content Source
+Full biography provided.
+
+Highlights
+
+MBBS – Government Medical College, Chengalpattu
+
+Fellowship in Clinical Diabetology (IMA)
+
+CCEBDM and CCGDM – PHFI
+
+Certificate Course in Diabetes Care – Leicester Diabetes Centre, UK
+
+Enhanced Postgraduate Certification in Diabetes Mellitus (2025)
+
+Currently pursuing M.Sc. – Birmingham City University, UK
+
+Special interest
+Diabetic Foot Care
+
+Awards
+
+RSSDI Innovation Award in Diabetes Care (2023)
+
+Diabetes India Award for Excellence in Diabetes Care and Management (2024)
+
+
+---------------------------------------
+
+Doctor 2
+
+Dr. Varsha Ezhilarasu
+Co-Director, Consultant Physician & Diabetologist – NV Consultations
+
+Content Source
+Full biography provided.
+
+Highlights
+
+MBBS – Government Chengalpattu Medical College
+
+DNB Anaesthesiology – MIOT Hospital
+
+CCEBDM – PHFI
+
+FCD – Fellowship in Clinical Diabetology
+
+Award
+
+Diabetes India Award (2025)
+
+
+---------------------------------------
+
+SECTION 4 — SERVICES
+
+Page Section Title
+Our Services
+
+Services List
+
+Diabetes Screening and Management
+
+Hypertension Management
+
+Thyroid Disorder Evaluation
+
+Preventive Health Check-ups
+
+Diabetic Foot Care
+
+Lifestyle and Diet Counselling
+
+General Physician Consultation
+
+
+---------------------------------------
+
+SECTION 5 — FACILITIES
+
+Section Title
+Our Facilities
+
+Facility 1
+NV Consultations
+
+Description
+The clinic provides expert consultation for diabetes management, hypertension, thyroid disorders, and general medical conditions.
+
+
+Facility 2
+NV Pharmacy
+
+Description
+Provides genuine medicines, special discounts, and free home delivery services.
+
+
+Facility 3
+Multispecialty Consultations
+
+Specialties
+
+General Surgery
+
+Surgical Oncology
+
+Orthopedic Surgery
+
+Plastic Surgery
+
+ENT
+
+Nephrology
+
+Urology
+
+
+---------------------------------------
+
+SECTION 6 — MULTISPECIALTY CONSULTATIONS
+
+Content Source
+Multispecialty Consultations section
+
+Description
+
+Specialist consultations are available through visiting consultants when required.
+
+Specialties
+
+General Surgery
+Surgical Oncology
+Orthopedic Surgery
+Plastic Surgery
+ENT
+Nephrology
+Urology
+
+
+---------------------------------------
+
+SECTION 7 — FAQ
+
+Questions
+
+What is NV Consultations?
+
+What services are available at NV Consultations?
+
+When should someone visit NV Consultations?
+
+Does NV Consultations provide preventive health check-ups?
+
+Can lifestyle changes help manage diabetes and hypertension?
+
+How often should patients with diabetes have follow-up consultations?
+
+Where is NV Consultations located?
+
+
+---------------------------------------
+
+SECTION 8 — CONTACT SECTION
+
+Clinic Name
+NV CONSULTATIONS
+
+Location
+Kolathur, Chennai
+
+Phone / WhatsApp
+81244 98803
+
+Contact Options
+
+Phone Call
+
+WhatsApp
+
+Website Contact Form
+
+Google Maps Location
+
+
+---------------------------------------
+ABOUT PAGE STRUCTURE
+---------------------------------------
+
+Section 1
+About NV Consultations
+
+Section 2
+Dr. R. Navin – Full Biography
+
+Section 3
+Dr. Varsha Ezhilarasu – Full Biography
+
+Section 4
+Why Choose NV Consultations
+
+
+---------------------------------------
+SERVICES PAGE STRUCTURE
+---------------------------------------
+
+Page Title
+Our Medical Services
+
+Sections
+
+Diabetes Screening and Management
+
+Hypertension Management
+
+Thyroid Disorder Evaluation
+
+Preventive Health Check-ups
+
+Diabetic Foot Care
+
+Lifestyle and Diet Counselling
+
+General Physician Consultation
+
+
+---------------------------------------
+CONTACT PAGE STRUCTURE
+---------------------------------------
+
+Section 1
+Clinic Address
+
+Section 2
+Contact Details
+
+Phone
+WhatsApp
+
+Section 3
+Google Map
+
+Section 4
+Appointment Form
+
+
+------------------------
+Multispecialty Consultations
+
+At NV Consultations, we strive to provide comprehensive and coordinated healthcare. In addition to our primary services, specialist consultations are available based on patient needs.
+
+Through our network of visiting consultants, patients can access expert care in the following specialties:
+
+General Surgery
+
+Surgical Oncology
+
+Orthopedic Surgery
+
+Plastic Surgery
+
+ENT (Ear, Nose & Throat)
+
+Nephrology
+
+Urology
+
+
+These consultations are available by prior appointment, ensuring patients receive timely specialist evaluation and guidance when required.
+
+Our goal at NV Consultations is to offer convenient access to multidisciplinary medical expertise, enabling patients to receive comprehensive care under one roof.
+----------
+
+---------------------------------------
+FOOTER CONTENT
+---------------------------------------
+
+Quick Links
+
+Home
+About
+Services
+Contact
+
+
+Policies
+
+Privacy Policy
+Terms and Conditions
+Medical Disclaimer
+Appointment Policy
+Cancellation & Rescheduling Policy
+
+
+Contact
+
+NV CONSULTATIONS
+Kolathur, Chennai
+
+Phone / WhatsApp
+81244 98803
+
+//////////
+Put 2-3 photos of this...
+dr.navin going live and discussing about diabetes Awareness measures in tamil fm station - radiomirchi
+////////
+
+
+////
+Put 3 photos as collage and mark it as
+DR.Navin discussing on d
+Empagliflozin and it's position in diabetic armamentarium
+///
+
+
+//////////
+Dr.Navin discussing on lipoprotein a and cardiovascular health
+////////
+
+---------------------------------------
+OPTIONAL FUTURE FEATURES
+---------------------------------------
+
+Online Appointment Booking
+
+Doctor Availability Schedule
+
+Health Blog / Diabetes Education
+
+Patient Testimonials
+
+Health Camp Announcements
+
+
+---------------------------------------
+END OF WEBSITE PLAN
+---------------------------------------

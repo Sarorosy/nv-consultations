@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #2AA7FF;
+  --color-primary-dark: #1B3C74;
+  --color-primary-light: #E8F1FF;
+  --color-secondary: #8A96A6;
+  --color-dark: #102851;
+  --color-bg-soft: #F4F8FF;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .dark {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-bg-soft font-sans text-dark transition-colors duration-300;
+  }
+
+  .dark body {
+    background-color: #0B1120 !important;
+    color: #F3F4F6 !important;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/40;
+  }
+
+  .primary-gradient {
+    @apply bg-gradient-to-r from-[#2AA7FF] to-[#1B3C74];
+  }
+
+  .primary-gradient-btn {
+    @apply bg-gradient-to-r from-[#4FACFE] to-[#00F2FE] text-white font-bold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 active:scale-95;
+  }
+
+  .section-pill {
+    @apply inline-flex items-center px-4 py-1.5 rounded-full bg-primary-light text-primary text-xs font-bold tracking-wider uppercase mb-6;
+  }
+
+  .stats-card {
+    @apply bg-white dark:bg-white/5 p-8 rounded-[2.5rem] transition-all duration-300;
+  }
+}
+
+@keyframes bounce-x {
+
+  0%,
+  100% {
+    transform: translateX(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+
+  50% {
+    transform: translateX(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-bounce-x {
+  animation: bounce-x 1s infinite;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-dark to-primary;
+}
