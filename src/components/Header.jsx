@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
-import { Menu, X, User, Moon, Sun } from "lucide-react";
+import { Menu, X, User, Moon, Sun, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../utils/idb.jsx";
+import { motion, AnimatePresence } from "framer-motion";
 import logo from "../assets/navinlogo.svg";
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -18,6 +20,15 @@ export default function Header() {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
+  // Prevent scrolling when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [isMenuOpen]);
+
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
@@ -30,7 +41,7 @@ export default function Header() {
   ];
 
   return (
-    <nav className="w-full bg-[#F4F8FF] dark:bg-[#0B1120] px-6 py-4 transition-colors duration-300">
+    <nav className="w-full bg-[#F4F8FF] dark:bg-[#0B1120] px-6 py-4 transition-colors duration-300 relative z-[50]">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
 
         {/* Main Pill */}
@@ -41,16 +52,6 @@ export default function Header() {
             className="flex items-center gap-2 pl-2 pr-8 cursor-pointer"
             onClick={() => navigate("/")}
           >
-            {/* <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#2AA7FF] to-[#1B3C74] flex items-center justify-center text-white shadow-lg overflow-hidden transition-transform hover:rotate-12">
-              <div className="relative w-5 h-5 flex items-center justify-center">
-                <div className="absolute w-2 h-5 bg-white rounded-full"></div>
-                <div className="absolute w-5 h-2 bg-white rounded-full"></div>
-                <div className="absolute w-1 h-1 bg-[#2AA7FF] rounded-full z-10"></div>
-              </div>
-            </div> */}
-            {/* <span className="text-lg font-extrabold text-[#102851] tracking-tight">
-              Medify
-            </span> */}
             <img src={logo} alt="logo" className="w-30" />
           </div>
 
@@ -75,10 +76,10 @@ export default function Header() {
 
           {/* Mobile Toggle */}
           <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={() => setIsMenuOpen(true)}
             className="lg:hidden w-10 h-10 flex items-center justify-center text-[#102851] dark:text-gray-300"
           >
-            {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            <Menu size={22} />
           </button>
         </div>
 
@@ -140,48 +141,102 @@ export default function Header() {
       </div>
 
       {/* Mobile Drawer */}
-      {isMenuOpen && (
-        <div className="lg:hidden mt-3 bg-white dark:bg-[#1E293B] rounded-xl shadow-xl border border-[#E8F1FF] dark:border-gray-700/50 p-3 animate-in fade-in slide-in-from-top-4 duration-300 overflow-hidden text-center">
-          <div className="flex flex-col gap-1">
-            {navLinks.map((link) => (
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ x: "-100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "-100%" }}
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            className="fixed inset-0 z-[100] bg-black text-white flex flex-col p-8 lg:hidden"
+          >
+            {/* Drawer Header */}
+            <div className="flex items-center justify-between mb-12">
+              <img src={logo} alt="logo" className="w-24 brightness-0 invert" />
               <button
-                key={link.name}
-                onClick={() => {
-                  navigate(link.path);
-                  setIsMenuOpen(false);
-                }}
-                className="w-full text-center px-4 py-2.5 rounded-lg text-sm font-semibold text-[#102851] dark:text-gray-300 hover:bg-[#E8F1FF] dark:hover:bg-[#2AA7FF]/20 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+                className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors"
               >
-                {link.name}
-              </button>
-            ))}
-
-            <hr className="my-2 border-[#E8F1FF] dark:border-gray-700/50" />
-
-            <div className="flex flex-col gap-2 pt-1">
-              <button
-                onClick={() => {
-                  navigate("/appointment");
-                  setIsMenuOpen(false);
-                }}
-                className="w-full py-2.5 text-center font-bold text-[#102851] dark:text-gray-300 border border-[#102851]/10 dark:border-gray-700/50 rounded-lg"
-              >
-                Book Appointment
-              </button>
-
-              <button
-                onClick={() => {
-                  window.location.href = "tel:+918124498803";
-                  setIsMenuOpen(false);
-                }}
-                className="w-full py-2.5 text-center font-bold bg-gradient-to-tr from-[#2AA7FF] to-[#1B3C74] text-white rounded-lg shadow-lg shadow-[#2AA7FF]/30"
-              >
-                Call Now
+                <X size={28} />
               </button>
             </div>
-          </div>
-        </div>
-      )}
+
+            {/* Nav Links */}
+            <div className="flex flex-col gap-6">
+              {navLinks.map((link, index) => (
+                <motion.button
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.1 + index * 0.05 }}
+                  key={link.name}
+                  onClick={() => {
+                    navigate(link.path);
+                    setIsMenuOpen(false);
+                  }}
+                  className="flex items-center justify-between w-full text-left text-3xl font-bold tracking-tight group"
+                >
+                  <span className="group-hover:text-[#2AA7FF] transition-colors">{link.name}</span>
+                  <ArrowRight className="opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all text-[#2AA7FF]" size={28} />
+                </motion.button>
+              ))}
+            </div>
+
+            <div className="mt-auto flex flex-col gap-8">
+              {/* Theme Toggle */}
+              <div className="flex items-center justify-between p-4 bg-white/5 rounded-2xl">
+                <div className="flex flex-col">
+                  <span className="text-sm text-gray-400 font-medium">Appearance</span>
+                  <span className="text-lg font-bold">{theme === 'light' ? 'Light Mode' : 'Dark Mode'}</span>
+                </div>
+                <div
+                  onClick={toggleTheme}
+                  className="flex items-center bg-[#2AA7FF]/20 rounded-full p-1.5 w-[70px] border border-white/10 cursor-pointer transition-all relative"
+                >
+                  <motion.div
+                    animate={{ x: theme === 'dark' ? 32 : 0 }}
+                    transition={{ type: "spring", damping: 20, stiffness: 300 }}
+                    className="flex items-center justify-center w-8 h-8 bg-[#2AA7FF] rounded-full text-white shadow-lg"
+                  >
+                    {theme === "light" ? <Sun size={18} /> : <Moon size={18} />}
+                  </motion.div>
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col gap-4">
+                <button
+                  onClick={() => {
+                    navigate("/appointment");
+                    setIsMenuOpen(false);
+                  }}
+                  className="w-full py-5 text-center text-lg font-bold border border-white/20 rounded-2xl hover:bg-white/5 transition-colors"
+                >
+                  Book Appointment
+                </button>
+
+                <button
+                  onClick={() => {
+                    window.location.href = "tel:+918124498803";
+                    setIsMenuOpen(false);
+                  }}
+                  className="w-full py-5 text-center text-lg font-bold bg-gradient-to-tr from-[#2AA7FF] to-[#1B3C74] text-white rounded-2xl shadow-2xl shadow-[#2AA7FF]/20"
+                >
+                  Call Now
+                </button>
+              </div>
+
+              {/* Footer Info */}
+              <div className="flex justify-between items-center text-gray-500 text-sm pt-4 border-t border-white/5">
+                <span>© 2026 Navin Hospital</span>
+                <div className="flex gap-4">
+                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                  <span>We are open</span>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }
