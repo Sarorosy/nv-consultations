@@ -190,7 +190,7 @@ const ActivitiesSection = ({ content = true }) => {
                                     </div>
                                     <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Diabetes Conference</h3>
                                     <p className="text-gray-300 text-sm md:text-lg mb-2 sm:mb-8 max-w-md leading-relaxed">
-                                        Dr. Navin was invited as a faculty for <span className="text-primary font-bold uppercase">D MANTRA 2025</span> (Diabetes Conference) where he spoke in managing diabetes in elderly population.
+                                        Dr. Navin participated as faculty at <span className="text-primary font-bold uppercase">D MANTRA 2025</span> , presenting on diabetes management in the geriatric population.
                                     </p>
                                 </div>
                                 <div className="w-full lg:w-2/3 grid grid-cols-2 h-[250px] sm:h-[300px] lg:h-full overflow-hidden order-1 lg:order-2">
