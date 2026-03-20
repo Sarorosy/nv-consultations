@@ -1,10 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Play, Star, Award } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 import navinImg from '../../assets/navin.png';
 import varshaImg from '../../assets/varsha.png';
 
 const AboutSection = () => {
+    const navigate = useNavigate();
+
     return (
         <section className="py-12 bg-gradient-to-br from-[#E8F1FF]/40 to-white dark:from-[#0B1120] dark:to-[#0B1120] overflow-hidden relative transition-colors duration-300">
             {/* Background Decorative Elements */}
@@ -116,10 +119,17 @@ const AboutSection = () => {
                         </div>
 
                         <div className="flex flex-wrap gap-4">
-                            <button className="primary-gradient-btn flex items-center gap-2 group">
-                                Meet Our Team <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-                            </button>
-                            <button className="px-8 py-3 rounded-full border-2 border-primary-light text-primary font-bold hover:bg-primary-light hover:text-white transition-all shadow-sm">
+                            <Link to="/about#team">
+                                <button
+                                    className="primary-gradient-btn flex items-center gap-2 group"
+                                >
+                                    Meet Our Team <ArrowRight size={20} className=" transition-transform" />
+                                </button>
+                            </Link>
+                            <button
+                                onClick={() => navigate('/services')}
+                                className="px-8 py-3 rounded-full border-2 text-primary font-medium border-primary transition-all shadow-sm"
+                            >
                                 View Services
                             </button>
                         </div>

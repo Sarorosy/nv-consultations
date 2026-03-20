@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mic, Presentation, HeartPulse, ExternalLink } from 'lucide-react';
+import { Mic, Presentation, HeartPulse, ExternalLink, Users, Award } from 'lucide-react';
 
 // Radio Images
 import radio1 from '../../assets/doctor_talking_in_radio/WhatsApp Image 2026-03-12 at 12.45.10 AM (1).jpeg';
@@ -15,6 +15,15 @@ import talk3 from '../../assets/talking/WhatsApp Image 2026-03-12 at 12.37.01 AM
 // Lipoprotein Images
 import lipo1 from '../../assets/Dr_Navin_discussing_on_lipoprotein_and_cardiovascular_health/WhatsApp Image 2026-03-12 at 12.32.41 AM.jpeg';
 import lipo2 from '../../assets/Dr_Navin_discussing_on_lipoprotein_and_cardiovascular_health/WhatsApp Image saa 2026-03-12 at 12.32.41 AM.jpeg';
+
+// Awareness Images
+import awareness1 from '../../assets/diabetes_awareness_initiative/WhatsApp Image 2026-03-17 at 7.36.18 PM.jpeg';
+import awareness2 from '../../assets/diabetes_awareness_initiative/WhatsApp Image 2026-03-17 at 7.36.18 PM (1).jpeg';
+
+// Conference Images
+import conference1 from '../../assets/diabetes_conference/WhatsApp Image 2026-03-17 at 7.41.04 PM.jpeg';
+import conference2 from '../../assets/diabetes_conference/WhatsApp Image 2026-03-17 at 7.41.04 PM (1).jpeg';
+import conference3 from '../../assets/diabetes_conference/WhatsApp Image 2026-03-17 at 7.41.05 PM.jpeg';
 
 const ActivitiesSection = () => {
     return (
@@ -105,28 +114,95 @@ const ActivitiesSection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
+                        className="group"
+                    >
+                        <div className="h-[450px] bg-gradient-to-br from-[#1B3C74] to-[#102851] rounded-[40px] p-8 flex flex-col border border-[#1B3C74] shadow-xl overflow-hidden relative text-white">
+                            <div className="relative z-10">
+                                <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-primary-light mb-6 group-hover:rotate-12 transition-transform">
+                                    <HeartPulse size={24} />
+                                </div>
+                                <h3 className="text-xl font-extrabold mb-3">Lipoprotein(a)</h3>
+                                <p className="text-blue-100/80 text-sm mb-6 leading-relaxed">
+                                    Discussing the critical role of Lipoprotein(a) in identifying and managing cardiovascular risks.
+                                </p>
+                            </div>
+
+                            {/* Collage Mini */}
+                            <div className="flex-grow grid grid-cols-2 gap-2 mt-auto">
+                                <div className="rounded-2xl overflow-hidden h-32">
+                                    <img src={lipo1} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Lipoprotein discussion" />
+                                </div>
+                                <div className="rounded-2xl overflow-hidden h-32">
+                                    <img src={lipo2} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Cardiovascular health" />
+                                </div>
+                            </div>
+
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+                        </div>
+                    </motion.div>
+
+                    {/* Awareness Activity */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3 }}
+                        className="lg:col-span-2 group"
+                    >
+                        <div className="relative h-[450px] rounded-[40px] overflow-hidden shadow-2xl border border-gray-100 dark:border-gray-800">
+                            <div className="absolute inset-0 flex gap-1">
+                                <div className="flex-1">
+                                    <img src={awareness1} alt="Diabetes Awareness Initiative" className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" />
+                                </div>
+                                <div className="flex-1">
+                                    <img src={awareness2} alt="Diabetes Awareness Initiative" className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" />
+                                </div>
+                            </div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-10">
+                                <div className="flex items-center gap-3 text-primary-light mb-4">
+                                    <Users size={24} />
+                                    <span className="font-bold tracking-widest text-xs uppercase">Government Collaboration</span>
+                                </div>
+                                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Diabetes Awareness Initiative</h3>
+                                <p className="text-gray-300 max-w-lg leading-relaxed">
+                                    Dr. Navin discussing regarding the various diabetes awareness initiatives what was done at Kolathur - with the Honourable Health Minister of the state - Thiru. Ma. Subramanian.
+                                </p>
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    {/* Conference Activity */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.4 }}
                         className="group lg:col-span-3"
                     >
-                        <div className="relative rounded-[40px] overflow-hidden shadow-2xl bg-gradient-to-r from-[#1B3C74] to-[#102851] text-white">
-                            <div className="grid grid-cols-1 lg:grid-cols-2">
-                                <div className="p-12 lg:p-16 flex flex-col justify-center">
-                                    <div className="flex items-center gap-3 text-primary-light mb-6">
-                                        <HeartPulse size={24} />
-                                        <span className="font-bold tracking-widest text-xs uppercase">Metabolic Research</span>
+                        <div className="relative rounded-[40px] overflow-hidden shadow-2xl bg-gradient-to-r from-[#17172A] to-[#1E293B] text-white border border-gray-800">
+                            <div className="flex flex-col lg:flex-row">
+                                <div className="w-full lg:w-1/3 p-8 sm:p-12 lg:p-16 flex flex-col justify-center order-2 lg:order-1">
+                                    <div className="flex items-center gap-3 text-primary-light mb-4 sm:mb-6">
+                                        <Award size={24} />
+                                        <span className="font-bold tracking-widest text-xs uppercase">D MANTRA 2025</span>
                                     </div>
-                                    <h3 className="text-3xl md:text-4xl font-bold mb-6">Lipoprotein(a) & <br /> Cardiovascular Health</h3>
-                                    <p className="text-gray-300 text-lg mb-8 max-w-md leading-relaxed">
-                                        An in-depth discussion on the critical role of Lipoprotein(a) in identifying and managing cardiovascular risks in diabetic patients.
+                                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Diabetes Conference</h3>
+                                    <p className="text-gray-300 text-sm md:text-lg mb-2 sm:mb-8 max-w-md leading-relaxed">
+                                        Dr. Navin was invited as a faculty for <span className="text-primary font-bold uppercase">D MANTRA 2025</span> (Diabetes Conference) where he spoke in managing diabetes in elderly population.
                                     </p>
-                                    <div className="flex items-center gap-4">
-                                        <button className="flex items-center gap-2 font-bold px-6 py-3 bg-white text-primary-dark rounded-full hover:bg-primary transition-all hover:text-white">
-                                            Read More <ExternalLink size={18} />
-                                        </button>
-                                    </div>
                                 </div>
-                                <div className="grid grid-cols-2 h-[300px] lg:h-auto">
-                                    <img src={lipo1} alt="Lipoprotein discussion" className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" />
-                                    <img src={lipo2} alt="Cardiovascular health" className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" />
+                                <div className="w-full lg:w-2/3 grid grid-cols-2 h-[250px] sm:h-[300px] lg:h-full overflow-hidden order-1 lg:order-2">
+                                    <div className="overflow-hidden">
+                                        <img src={conference1} alt="Conference" className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" />
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <div className="overflow-hidden h-1/2 border-b border-[#0B1120] border-l">
+                                            <img src={conference2} alt="Conference" className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" />
+                                        </div>
+                                        <div className="overflow-hidden h-1/2 border-l border-[#0B1120]">
+                                            <img src={conference3} alt="Conference" className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

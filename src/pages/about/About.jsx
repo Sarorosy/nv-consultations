@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -12,6 +13,8 @@ import varshaImg from '../../assets/varsha.png';
 import { Award, BookOpen, GraduationCap, Heart, ShieldCheck, Stethoscope, Users } from 'lucide-react';
 
 const About = () => {
+    const { hash } = useLocation();
+
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
         const lenis = new Lenis({
@@ -33,11 +36,19 @@ const About = () => {
         gsap.ticker.add(update);
         gsap.ticker.lagSmoothing(0);
 
+        if (hash) {
+            setTimeout(() => {
+                lenis.scrollTo(hash, { offset: -80 });
+            }, 100);
+        } else {
+            window.scrollTo(0, 0);
+        }
+
         return () => {
             lenis.destroy();
             gsap.ticker.remove(update);
         };
-    }, []);
+    }, [hash]);
 
     const whyChooseUs = [
         {
@@ -107,7 +118,7 @@ const About = () => {
             </section>
 
             {/* Doctors Section */}
-            <section className="py-20 bg-[#f8faff] dark:bg-[#0F172A]">
+            <section className="py-20 bg-[#f8faff] dark:bg-[#0F172A]" id='team'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Dr. Navin */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">

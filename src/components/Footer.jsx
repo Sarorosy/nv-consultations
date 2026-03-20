@@ -1,6 +1,7 @@
 import React from "react";
 import { Facebook, Instagram, Linkedin, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
 
 const Footer = () => {
     return (
@@ -115,6 +116,20 @@ const Footer = () => {
 
                 </div>
             </div>
+
+            <FloatingWhatsApp
+                phoneNumber="917010972462"
+                accountName="NV Consultations"
+                avatar="/ndwhite.png"
+                statusMessage="Typically replies in minutes"
+                chatMessage="Hi 👋! How can we help?"
+                placeholder="Type your message here..."
+                allowClickAway={false}
+                notification
+                notificationSound
+                // darkMode={theme === "dark"}
+                allowEsc={false}
+            />
         </footer>
     );
 };

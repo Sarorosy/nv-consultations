@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ShieldCheck, HeartPulse, Laptop, ArrowRight } from 'lucide-react';
 import nurseImg from '../../assets/navin-thumbsup.png';
+import { Link } from 'react-router-dom';
 
 const ServicesSection = () => {
     const cards = [
@@ -46,9 +47,11 @@ const ServicesSection = () => {
                             from routine check-ups to specialized diabetes management.
                         </p>
 
-                        <button className="primary-gradient-btn">
-                            Contact Us
-                        </button>
+                        <Link to="/contact">
+                            <button className="primary-gradient-btn">
+                                Contact Us
+                            </button>
+                        </Link>
                     </motion.div>
 
                     {/* RIGHT IMAGE */}
@@ -101,10 +104,12 @@ const ServicesSection = () => {
                                 {card.desc}
                             </p>
 
-                            <button className="text-black dark:text-white bg-white dark:bg-gray-800 border border-black dark:border-gray-600 px-2 py-1 rounded-full font-bold text-xs uppercase tracking-widest flex items-center gap-2 hover:gap-3 transition-all">
-                                Learn More
-                                <ArrowRight size={18} className="bg-black dark:bg-primary text-white rounded-full p-1" />
-                            </button>
+                            <Link to="/contact">
+                                <button className="text-black dark:text-white bg-white dark:bg-gray-800 border border-black dark:border-gray-600 px-2 py-1 rounded-full font-bold text-xs uppercase tracking-widest flex items-center gap-2 hover:gap-3 transition-all">
+                                    Learn More
+                                    <ArrowRight size={18} className="bg-black dark:bg-primary text-white rounded-full p-1" />
+                                </button>
+                            </Link>
                         </motion.div>
                     ))}
                 </div>

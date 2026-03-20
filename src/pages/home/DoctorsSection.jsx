@@ -1,10 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star } from 'lucide-react';
 import drNavinImg from '../../assets/navin.png';
 import drVarshaImg from '../../assets/varsha.png';
 
 const DoctorsSection = () => {
+    const navigate = useNavigate();
     const doctors = [
         {
             name: "Dr. R. Navin",
@@ -45,7 +47,7 @@ const DoctorsSection = () => {
                             Our team of highly qualified doctors is dedicated to providing personalized care for all your health needs.
                         </p>
                         <div className="h-px w-full bg-primary/10 dark:bg-gray-800 mb-4" />
-                        <button className="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all">
+                        <button onClick={() => navigate('/about#team')} className="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all">
                             View All Doctors <ArrowRight size={20} />
                         </button>
                     </motion.div>
@@ -77,7 +79,7 @@ const DoctorsSection = () => {
                                 <h3 className="text-2xl font-bold text-primary-dark dark:text-white mb-1">{doc.name}</h3>
                                 <p className="text-primary font-medium mb-6 uppercase text-xs tracking-widest">{doc.role}</p>
 
-                                <button className="w-full py-4 rounded-2xl bg-bg-soft dark:bg-gray-800 text-primary-dark dark:text-white font-bold hover:bg-primary hover:text-white transition-all">
+                                <button onClick={() => navigate('/appointment')} className="w-full py-4 rounded-2xl bg-bg-soft dark:bg-gray-800 text-primary-dark dark:text-white font-bold hover:bg-primary hover:text-white transition-all">
                                     Book Appointment
                                 </button>
                             </motion.div>

@@ -40,14 +40,14 @@ const ScrollToTopButton = () => {
                     }}
                     whileTap={{ scale: 0.9 }}
                     onClick={scrollToTop}
-                    className="fixed bottom-8 right-8 z-[9999] w-14 h-14 flex items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-primary-dark text-white cursor-pointer shadow-xl border border-white/20 group overflow-hidden"
+                    className="fixed bottom-8 left-8 z-[9999] w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary-dark text-white cursor-pointer shadow-xl border border-white/20 group overflow-hidden"
                     aria-label="Scroll to top"
                 >
                     {/* Glass effect layer */}
                     <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                     <div className="relative z-10 flex items-center justify-center">
-                        <ChevronUp className="w-7 h-7 group-hover:-translate-y-1.5 transition-transform duration-300 ease-out" />
+                        <ChevronUp className="w-7 h-7  transition-transform duration-300 ease-out" />
                     </div>
 
                     {/* Ripple/Pulse effect */}

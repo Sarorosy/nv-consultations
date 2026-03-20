@@ -29,6 +29,11 @@ export default function Hero() {
                         transition={{ duration: 0.8 }}
                         className="z-10 text-center lg:text-left"
                     >
+                        <div className="flex items-center gap-2 mb-4 bg-white/50 dark:bg-white/5 backdrop-blur-sm border border-primary/10 dark:border-white/10 rounded-full px-3 py-1 w-fit mx-auto lg:mx-0 shadow-sm animate-fade-in">
+                            <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                            <span className="text-[12px] font-black uppercase tracking-[0.1em] text-primary-dark dark:text-gray-300">NV CONSULTATIONS</span>
+                        </div>
+
                         <p className="hidden lg:block text-md text-secondary dark:text-gray-400 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed uppercase tracking-wide font-medium">
                             <span className="flex items-center gap-2">
                                 SPECIALIZED CARE FOR
@@ -117,14 +122,14 @@ export default function Hero() {
                             <div className=" flex flex-col items-center gap-2">
                                 <div className="absolute bottom-22  right-2 flex flex-wrap gap-2 justify-center">
                                     {specialists.slice(0, 3).map((spec, index) => (
-                                        <span key={spec} className={`px-4 py-2 hover:bg-white hover:text-black ${index == 0 ? "bg-white text-black  border border-white/30" : "bg-transparent text-white  border-1 border-white"} rounded-full text-xs font-semibold   whitespace-nowrap`}>
+                                        <span key={spec} className={`px-4 py-2 hover:bg-white hover:text-black bg-white text-black  border border-black rounded-full text-xs font-semibold   whitespace-nowrap`}>
                                             {spec}
                                         </span>
                                     ))}
                                 </div>
                                 <div className="absolute bottom-3 left-20 flex flex-wrap gap-2 justify-center">
                                     {specialists.slice(3).map((spec) => (
-                                        <span key={spec} className="px-4 py-2 hover:bg-white hover:text-black bg-transparent text-white  border-1 border-white rounded-full text-xs font-semibold   whitespace-nowrap">
+                                        <span key={spec} className="px-4 py-2 hover:bg-white hover:text-black bg-white text-black  border border-black rounded-full text-xs font-semibold   whitespace-nowrap">
                                             {spec}
                                         </span>
                                     ))}
@@ -132,66 +137,23 @@ export default function Hero() {
                             </div>
                         </div>
 
-                        {/* Floating Card 1: Orthopedics */}
-                        <motion.div
-                            initial={{ y: 20, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ delay: 0.5, duration: 0.5 }}
-                            className="absolute -left-12 top-1/4 z-20 hidden xl:block"
-                        >
-                            <div className="bg-white dark:bg-[#1E293B] p-4 rounded-3xl shadow-2xl border border-primary-light dark:border-gray-700/50 max-w-[280px]">
-                                <div className="flex items-center gap-4 mb-4">
-                                    <div className="w-12 h-12 bg-pink-100 dark:bg-pink-900/30 rounded-2xl flex items-center justify-center">
-                                        <Stethoscope size={24} color="#7a319eff" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-primary-dark dark:text-white">Diabetes Care</h3>
-                                        <div className="flex items-center -space-x-2 mt-1">
-                                            {[navin, varsha].map((img, i) => (
-                                                <img key={i} src={img} className="w-6 h-6 rounded-full border-2 border-white dark:border-gray-800 object-cover" alt="doctor" />
-                                            ))}
-                                            <span className="ml-3 text-[10px] font-bold text-secondary dark:text-gray-400 tracking-tight">Expert Specialists</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="flex items-center justify-between text-[11px] font-medium text-secondary">
-                                    <span className="flex items-center"><Clock size={12} className="mr-1" /> Consultation Hours</span>
-                                    <span className="bg-primary/10 text-primary px-1 py-1 rounded ml-1">Mon - Fri</span>
-                                </div>
-                            </div>
-                        </motion.div>
-
-                        {/* Floating Card 2: Dental Care Profile */}
+                        {/* Floating Profile Card */}
                         <motion.div
                             initial={{ x: 30, opacity: 0 }}
                             animate={{ x: 0, opacity: 1 }}
-                            transition={{ delay: 0.7, duration: 0.5 }}
-                            className="absolute -right-10 top-1/3 z-20 hidden xl:block  bg-transparent"
+                            transition={{ delay: 0.6, duration: 0.5 }}
+                            className="absolute right-0 md:-right-8 top-1/3 z-20 hidden sm:block delay-100"
                         >
-                            <div className="shadow-2xl bg-white dark:bg-[#1E293B] p-4 rounded-[40px] border-4 border-white dark:border-gray-800 max-w-[200px]">
-                                <div className="relative rounded-[32px] overflow-hidden mb-3 h-40">
-                                    <img src={navin} alt="Dr Navin" className="w-full h-full object-cover" />
+                            <div className="bg-white/90 dark:bg-[#1E293B]/90 backdrop-blur-md px-2 py-1.5 rounded-2xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.15)] dark:shadow-none border border-white/60 dark:border-gray-700/50 flex items-center gap-4 pr-6 hover:scale-105 transition-transform duration-300 group cursor-pointer">
+                                <div className="w-10 h-10 flex flex-shrink-0 items-center justify-center rounded-xl border border-[#2AA7FF]/30 bg-gradient-to-tr from-[#E8F1FF] to-white dark:from-gray-800 dark:to-[#1E293B] shadow-inner group-hover:border-[#2AA7FF]/60 group-hover:shadow-[0_0_15px_rgba(42,167,255,0.2)] transition-all duration-300">
+                                    <Stethoscope size={20} className="text-[#2AA7FF] stroke-[2.5]" />
                                 </div>
-                                <h4 className="font-bold text-primary-dark dark:text-white text-sm mb-1 leading-tight">
-                                    Comprehensive Diabetes & Metabolic Care.
-                                </h4>
-                                <div className="flex items-center gap-2">
-                                    <div className="w-6 h-6 rounded-full overflow-hidden bg-primary/20">
-                                        <img src={navin} alt="avatar" className="w-full h-full object-cover" />
-                                    </div>
-                                    <div>
-                                        <p className="text-[10px] font-bold text-primary-dark dark:text-white">Dr. Navin</p>
-                                        <p className="text-[8px] text-secondary dark:text-gray-400">Diabetes Specialist</p>
-                                    </div>
+                                <div>
+                                    <h4 className="font-black text-[#102851] dark:text-white text-[17px] leading-tight tracking-tight">Dr. Navin</h4>
+                                    <p className="text-[11px] font-bold text-[#2AA7FF] tracking-wider uppercase mt-1">Diabetes Specialist</p>
                                 </div>
                             </div>
                         </motion.div>
-
-                        {/* Floating Badge: Eye Consultation */}
-                        <div className="absolute top-12 left-2 z-20 bg-white/90 dark:bg-[#1E293B]/90 backdrop-blur px-4 py-2 rounded-full shadow-lg border border-primary-light dark:border-gray-700/50 flex items-center gap-2">
-                            <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-                            <span className="text-xs font-bold text-primary-dark dark:text-white">Diabetes Consultation</span>
-                        </div>
 
                         {/* Corner Arrow Icon */}
                         <div className="absolute top-6 right-6 z-20 w-12 h-12 bg-black/20 rounded-full flex items-center justify-center text-white border border-white/30 cursor-pointer hover:bg-white/40">
@@ -200,13 +162,15 @@ export default function Hero() {
 
                         {/* Mobile Tagline - Restructured for 3 lines and positioned below image */}
                         <div className="lg:hidden mt-8 text-center">
+                            <h2 className="text-xl font-black text-[#102851] dark:text-white mb-4 uppercase tracking-[0.2em]">
+                                NV CONSULTATIONS
+                            </h2>
                             <p className="text-[13px] text-secondary dark:text-gray-400 leading-relaxed font-semibold tracking-[0.1em] uppercase">
                                 <span className="flex items-center justify-center gap-2 mb-1">
                                     SPECIALIZED CARE FOR
                                     <Sparkle size={14} className="fill-primary stroke-primary animate-[spin_4s_linear_infinite]" />
                                 </span>
-                                <span className="block">DIABETES MANAGEMENT</span>
-                                <span className="block text-primary/80 dark:text-primary-light">METABOLIC HEALTH & PREVENTIVE CARE.</span>
+                                <span className="block italic text-primary/80 dark:text-primary-light">DIABETES & METABOLIC HEALTH.</span>
                             </p>
                         </div>
                     </motion.div>
