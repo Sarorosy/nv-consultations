@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const PageHeader = ({ title, subtitle, breadcrumb }) => {
     return (
-        <section className="relative pt-32 pb-20 bg-[#f8faff] dark:bg-[#0B1120] overflow-hidden">
+        <section className="relative pt-10 pb-10 bg-[#f8faff] dark:bg-[#0B1120] overflow-hidden">
             {/* Decorative background */}
             <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 dark:bg-primary/10 skew-x-12 transform origin-top-right -mr-20"></div>
             <div className="absolute top-10 left-10 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>

@@ -1,6 +1,6 @@
 import { Calendar, Search, ArrowUpRight, CheckCircle2, Clock, Stethoscope, Sparkle } from "lucide-react";
 import { motion } from "framer-motion";
-import heroDoctor from "../assets/navinhero.png";
+import heroDoctor from "../assets/navinhero_new.png";
 import navin from "../assets/navin.png";
 import varsha from "../assets/varsha.png";
 import capsule from "../assets/capsule.png";
@@ -120,16 +120,16 @@ export default function Hero() {
 
                             {/* Bottom Specialist Categories Overlay */}
                             <div className=" flex flex-col items-center gap-2">
-                                <div className="absolute bottom-22  right-2 flex flex-wrap gap-2 justify-center">
+                                <div className="absolute bottom-16  md:bottom-22  right-2 flex flex-wrap gap-2 justify-center">
                                     {specialists.slice(0, 3).map((spec, index) => (
-                                        <span key={spec} className={`px-4 py-2 hover:bg-white hover:text-black bg-white text-black  border border-black rounded-full text-xs font-semibold   whitespace-nowrap`}>
+                                        <span key={spec} className={`px-4 py-2 hover:bg-white hover:text-black bg-white text-black  border border-black rounded-full text-[10px] md:text-xs font-semibold   whitespace-nowrap`}>
                                             {spec}
                                         </span>
                                     ))}
                                 </div>
-                                <div className="absolute bottom-3 left-20 flex flex-wrap gap-2 justify-center">
+                                <div className="absolute bottom-3 left-10 md:left-20 flex flex-wrap gap-2 justify-center">
                                     {specialists.slice(3).map((spec) => (
-                                        <span key={spec} className="px-4 py-2 hover:bg-white hover:text-black bg-white text-black  border border-black rounded-full text-xs font-semibold   whitespace-nowrap">
+                                        <span key={spec} className="px-4 py-2 hover:bg-white hover:text-black bg-white text-black  border border-black rounded-full text-[10px] md:text-xs font-semibold   whitespace-nowrap">
                                             {spec}
                                         </span>
                                     ))}

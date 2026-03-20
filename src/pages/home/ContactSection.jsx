@@ -1,16 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Clock, Send, User, Mail, MessageSquare, ChevronDown, Calendar } from 'lucide-react';
 import { toast } from 'react-hot-toast';
 
+import drNavinImg from '../../assets/navin.png';
+import drVarshaImg from '../../assets/varsha.png';
+
 const ContactSection = () => {
+    const location = useLocation();
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         phone: '',
         service: '',
-        message: ''
+        message: '',
+        doctor: location.state?.doctor || ''
     });
+
+    useEffect(() => {
+        if (location.state?.doctor) {
+            setFormData(prev => ({ ...prev, doctor: location.state.doctor }));
+        }
+    }, [location.state]);
+
+    const doctors = [
+        { 
+            name: "Dr. R. Navin", 
+            role: "Diabetologist", 
+            img: drNavinImg, 
+            bio: "Expert in comprehensive diabetes management and preventive healthcare with extensive clinical experience." 
+        },
+        { 
+            name: "Dr. Varsha E.", 
+            role: "Physician", 
+            img: drVarshaImg, 
+            bio: "Specializes in general medicine, lifestyle counselling, and providing personalized treatments for chronic conditions." 
+        }
+    ];
 
     const services = [
         "Diabetes Management",
@@ -30,7 +58,7 @@ const ContactSection = () => {
         e.preventDefault();
         console.log('Form submitted:', formData);
         toast.success(`Thank you, ${formData.name}! Your inquiry for ${formData.service} has been received.`);
-        setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+        setFormData({ name: '', email: '', phone: '', service: '', message: '', doctor: '' });
         e.target.reset();
     };
 
@@ -103,7 +131,10 @@ const ContactSection = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-lg font-bold text-primary-dark dark:text-white group-hover:text-primary transition-colors">Clinic Hours</h4>
-                                    <p className="text-secondary dark:text-secondary-muted text-base">Mon - Sat: 9:00 AM - 9:00 PM</p>
+                                    <div className="text-secondary dark:text-secondary-muted text-sm mt-1 space-y-1">
+                                        <p><span className="font-medium text-primary-dark dark:text-white/90">Mon - Sat:</span> 9:30 AM - 1:30 PM, 6:00 PM - 9:30 PM</p>
+                                        <p><span className="font-medium text-primary-dark dark:text-white/90">Sunday:</span> Closed</p>
+                                    </div>
                                 </div>
                             </div>
 
@@ -208,6 +239,49 @@ const ContactSection = () => {
 
                                 </div>
 
+                                {/* Doctor Selection */}
+                                <div>
+                                    <label className="text-sm font-bold text-primary-dark dark:text-white mb-3 block">Choose a Doctor (Optional)</label>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        {doctors.map((doc, idx) => (
+                                            <label 
+                                                key={idx} 
+                                                className={`group relative flex items-center gap-4 p-3 rounded-2xl cursor-pointer transition-all border-2 
+                                                ${formData.doctor === doc.name 
+                                                    ? 'border-primary bg-primary/5 dark:bg-primary/10' 
+                                                    : 'border-transparent bg-bg-soft dark:bg-white/10 hover:bg-bg-soft/80 dark:hover:bg-white/20'}`}
+                                            >
+                                                {/* Tooltip */}
+                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-56 p-3 bg-gray-900 dark:bg-gray-800 text-white text-xs rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 shadow-2xl pointer-events-none border border-gray-700">
+                                                    <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-gray-900 dark:bg-gray-800 border-b border-r border-gray-700 rotate-45"></div>
+                                                    <p className="text-center leading-relaxed">{doc.bio}</p>
+                                                </div>
+
+                                                <input 
+                                                    type="radio" 
+                                                    name="doctor" 
+                                                    value={doc.name} 
+                                                    checked={formData.doctor === doc.name} 
+                                                    onChange={handleChange} 
+                                                    className="hidden" 
+                                                />
+                                                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-white dark:border-gray-800 shadow-sm shrink-0">
+                                                    <img src={doc.img} alt={doc.name} className="w-full h-full object-cover" />
+                                                </div>
+                                                <div className="flex-1">
+                                                    <h4 className="font-bold text-primary-dark dark:text-white text-sm">{doc.name}</h4>
+                                                    <p className="text-[10px] text-secondary dark:text-secondary-muted uppercase tracking-wider font-semibold mt-0.5">{doc.role}</p>
+                                                </div>
+                                                <div className={`w-5 h-5 rounded-full flex items-center justify-center transition-all ${formData.doctor === doc.name ? 'bg-primary text-white scale-100' : 'bg-transparent scale-0'}`}>
+                                                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                                    </svg>
+                                                </div>
+                                            </label>
+                                        ))}
+                                    </div>
+                                </div>
+
                                 <div>
                                     <label className="text-sm font-bold text-primary-dark dark:text-white mb-2 block">Message</label>
                                     <div className="relative group">
@@ -228,15 +302,13 @@ const ContactSection = () => {
                                         We values your privacy and will respond within 24 hours.
                                     </p>
 
-                                    <motion.button
-                                        whileHover={{ scale: 1.02 }}
-                                        whileTap={{ scale: 0.98 }}
-                                        type="submit"
+                                    <button
+                                    onClick={handleSubmit}
                                         className="primary-gradient-btn py-4 px-10 flex items-center justify-center gap-3 text-lg font-bold shadow-xl shadow-primary/20"
                                     >
                                         Send Message
                                         <Send className="w-5 h-5" />
-                                    </motion.button>
+                                    </button>
                                 </div>
 
                             </form>

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const stats = [
     { value: "10K+", label: "Happy Patients" },
-    { value: "15+", label: "Years Experience" },
+    { value: "10+", label: "Years Experience" },
     { value: "7+", label: "Medical Services" },
     { value: "100%", label: "Patient Satisfaction" }
 ];

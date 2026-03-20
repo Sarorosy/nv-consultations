@@ -79,7 +79,7 @@ const DoctorsSection = () => {
                                 <h3 className="text-2xl font-bold text-primary-dark dark:text-white mb-1">{doc.name}</h3>
                                 <p className="text-primary font-medium mb-6 uppercase text-xs tracking-widest">{doc.role}</p>
 
-                                <button onClick={() => navigate('/appointment')} className="w-full py-4 rounded-2xl bg-bg-soft dark:bg-gray-800 text-primary-dark dark:text-white font-bold hover:bg-primary hover:text-white transition-all">
+                                <button onClick={() => navigate('/appointment', { state: { doctor: doc.name } })} className="w-full py-4 rounded-2xl bg-bg-soft dark:bg-gray-800 text-primary-dark dark:text-white font-bold hover:bg-primary hover:text-white transition-all">
                                     Book Appointment
                                 </button>
                             </motion.div>

@@ -167,7 +167,7 @@ const TestimonialsSection = () => {
                         <ExternalLink size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </a>
 
-                    <div className="mt-6 flex items-center justify-center gap-6">
+                    <div className="mt-6 flex flex-col md:flex-row items-center justify-center gap-6">
                         <div className="flex items-center gap-2">
                             <span className="text-2xl font-bold text-primary-dark dark:text-white">4.9/5</span>
                             <div className="flex gap-0.5">
@@ -176,7 +176,7 @@ const TestimonialsSection = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className="h-4 w-px bg-secondary/20"></div>
+                        <div className="hidden md:block h-4 w-px bg-secondary/20"></div>
                         <span className="text-secondary dark:text-blue-100/60 font-medium whitespace-nowrap">Based on 100+ Google Reviews</span>
                     </div>
                 </motion.div>

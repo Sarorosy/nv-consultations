@@ -25,10 +25,11 @@ import conference1 from '../../assets/diabetes_conference/WhatsApp Image 2026-03
 import conference2 from '../../assets/diabetes_conference/WhatsApp Image 2026-03-17 at 7.41.04 PM (1).jpeg';
 import conference3 from '../../assets/diabetes_conference/WhatsApp Image 2026-03-17 at 7.41.05 PM.jpeg';
 
-const ActivitiesSection = () => {
+const ActivitiesSection = ({ content = true }) => {
     return (
         <section className="py-24 bg-white dark:bg-[#0B1120] overflow-hidden transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                {content && (
                 <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-6">
                     <div className="max-w-2xl">
                         <span className="section-pill mb-4 dark:bg-primary/20 dark:text-primary-light uppercase tracking-[0.2em] text-[10px] font-bold py-1 px-3">Awareness & Excellence</span>
@@ -40,6 +41,7 @@ const ActivitiesSection = () => {
                         Dr. Navin actively engages with the community and medical fraternity to promote health education and advanced diabetes management.
                     </p>
                 </div>
+                )}
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {/* Radio Activity */}

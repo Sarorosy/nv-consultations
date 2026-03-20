@@ -9,8 +9,16 @@ import 'lenis/dist/lenis.css';
 import PageHeader from '../../components/PageHeader';
 import DynamicTitle from '../../components/DynamicTitle';
 import navinImg from '../../assets/navin.png';
-import varshaImg from '../../assets/varsha.png';
-import { Award, BookOpen, GraduationCap, Heart, ShieldCheck, Stethoscope, Users } from 'lucide-react';
+import varshaImg from '../../assets/varsha_original_bg.png';
+import { Award, BookOpen, Camera, GraduationCap, Heart, ShieldCheck, Stethoscope, Users } from 'lucide-react';
+import ActivitiesSection from '../home/ActivitiesSection';
+
+// Dynamically import all images from gallery folder
+const images = import.meta.glob('../../assets/gallery/*.{png,jpg,jpeg,webp}', { eager: true });
+const galleryImages = Object.values(images).map(img => ({
+    src: img.default,
+    alt: "NV Consultations Gallery"
+}));
 
 const About = () => {
     const { hash } = useLocation();
@@ -233,6 +241,58 @@ const About = () => {
                         </motion.div>
                     </div>
                 </div>
+            </section>
+
+            {/* Gallery Section */}
+            <section className="py-20 bg-white dark:bg-[#0B1120]">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16">
+                        <motion.div
+                            initial={{ opacity: 0, y: -20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-bold tracking-widest uppercase mb-4"
+                        >
+                            <Camera size={16} /> Showcase
+                        </motion.div>
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#111827] dark:text-white mb-4">Our Clinic Gallery</h2>
+                        <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+                        <p className="mt-6 text-secondary dark:text-gray-400 max-w-2xl mx-auto text-lg">
+                            Take a visual tour of our facility and catch a glimpse of our clinical activities and patient care excellence.
+                        </p>
+                    </div>
+
+                    <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+                        {galleryImages.map((image, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{
+                                    delay: index * 0.1,
+                                    duration: 0.5,
+                                    ease: "easeOut"
+                                }}
+                                className="relative overflow-hidden rounded-3xl group cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500"
+                            >
+                                <img
+                                    src={image.src}
+                                    alt={image.alt}
+                                    className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
+                                    loading="lazy"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-8">
+                                    <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                        <p className="text-white font-medium text-lg">Focus on Patient Care</p>
+                                        <p className="text-white/70 text-sm">NV Consultations</p>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+                <ActivitiesSection content={false} />
             </section>
 
             {/* Mission/Vision - Simple version from text */}
