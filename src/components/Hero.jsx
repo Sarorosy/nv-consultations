@@ -2,7 +2,7 @@ import { Calendar, Search, ArrowUpRight, CheckCircle2, Clock, Stethoscope, Spark
 import { motion } from "framer-motion";
 import heroDoctor from "../assets/navinhero_new.png";
 import navin from "../assets/navin.png";
-import varsha from "../assets/varsha.png";
+import varsha from "../assets/varsha_square.png";
 import capsule from "../assets/capsule.png";
 
 import { useNavigate } from "react-router-dom";

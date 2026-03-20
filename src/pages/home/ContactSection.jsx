@@ -5,7 +5,7 @@ import { MapPin, Phone, Clock, Send, User, Mail, MessageSquare, ChevronDown, Cal
 import { toast } from 'react-hot-toast';
 
 import drNavinImg from '../../assets/navin.png';
-import drVarshaImg from '../../assets/varsha.png';
+import drVarshaImg from '../../assets/varsha_square.png';
 
 const ContactSection = () => {
     const location = useLocation();
@@ -26,17 +26,17 @@ const ContactSection = () => {
     }, [location.state]);
 
     const doctors = [
-        { 
-            name: "Dr. R. Navin", 
-            role: "Diabetologist", 
-            img: drNavinImg, 
-            bio: "Expert in comprehensive diabetes management and preventive healthcare with extensive clinical experience." 
+        {
+            name: "Dr. R. Navin",
+            role: "Diabetologist",
+            img: drNavinImg,
+            bio: "Expert in comprehensive diabetes management and preventive healthcare with extensive clinical experience."
         },
-        { 
-            name: "Dr. Varsha E.", 
-            role: "Physician", 
-            img: drVarshaImg, 
-            bio: "Specializes in general medicine, lifestyle counselling, and providing personalized treatments for chronic conditions." 
+        {
+            name: "Dr. Varsha Ezhilarasu",
+            role: "Physician",
+            img: drVarshaImg,
+            bio: "Specializes in general medicine, lifestyle counselling, and providing personalized treatments for chronic conditions."
         }
     ];
 
@@ -133,7 +133,7 @@ const ContactSection = () => {
                                     <h4 className="text-lg font-bold text-primary-dark dark:text-white group-hover:text-primary transition-colors">Clinic Hours</h4>
                                     <div className="text-secondary dark:text-secondary-muted text-sm mt-1 space-y-1">
                                         <p><span className="font-medium text-primary-dark dark:text-white/90">Mon - Sat:</span> 9:30 AM - 1:30 PM, 6:00 PM - 9:30 PM</p>
-                                        <p><span className="font-medium text-primary-dark dark:text-white/90">Sunday:</span> Closed</p>
+                                        <p><span className="font-medium text-primary-dark dark:text-white/90">Sunday:</span> Available by appointment only</p>
                                     </div>
                                 </div>
                             </div>
@@ -141,7 +141,7 @@ const ContactSection = () => {
                             {/* Map */}
                             <div className="rounded-[2rem] overflow-hidden border-4 border-bg-soft dark:border-white/5 shadow-2xl h-72 mt-6 group relative">
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15541.972379521344!2d80.2037785!3d13.125191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52646d6a5d7d3d%3A0xe7a505b22b10a22!2sKolathur%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.687557713214!2d80.2143786!3d13.118969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526577c3d9edbf%3A0x6d1f986475f15258!2sNV%20CONSULTATIONS-DR.NAVIN&#39;S%20DIABETES%20CARE!5e0!3m2!1sen!2sin!4v1773990938253!5m2!1sen!2sin"
                                     width="100%"
                                     height="100%"
                                     style={{ border: 0 }}
@@ -244,12 +244,12 @@ const ContactSection = () => {
                                     <label className="text-sm font-bold text-primary-dark dark:text-white mb-3 block">Choose a Doctor (Optional)</label>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                         {doctors.map((doc, idx) => (
-                                            <label 
-                                                key={idx} 
+                                            <label
+                                                key={idx}
                                                 className={`group relative flex items-center gap-4 p-3 rounded-2xl cursor-pointer transition-all border-2 
-                                                ${formData.doctor === doc.name 
-                                                    ? 'border-primary bg-primary/5 dark:bg-primary/10' 
-                                                    : 'border-transparent bg-bg-soft dark:bg-white/10 hover:bg-bg-soft/80 dark:hover:bg-white/20'}`}
+                                                ${formData.doctor === doc.name
+                                                        ? 'border-primary bg-primary/5 dark:bg-primary/10'
+                                                        : 'border-transparent bg-bg-soft dark:bg-white/10 hover:bg-bg-soft/80 dark:hover:bg-white/20'}`}
                                             >
                                                 {/* Tooltip */}
                                                 <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-56 p-3 bg-gray-900 dark:bg-gray-800 text-white text-xs rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 shadow-2xl pointer-events-none border border-gray-700">
@@ -257,13 +257,13 @@ const ContactSection = () => {
                                                     <p className="text-center leading-relaxed">{doc.bio}</p>
                                                 </div>
 
-                                                <input 
-                                                    type="radio" 
-                                                    name="doctor" 
-                                                    value={doc.name} 
-                                                    checked={formData.doctor === doc.name} 
-                                                    onChange={handleChange} 
-                                                    className="hidden" 
+                                                <input
+                                                    type="radio"
+                                                    name="doctor"
+                                                    value={doc.name}
+                                                    checked={formData.doctor === doc.name}
+                                                    onChange={handleChange}
+                                                    className="hidden"
                                                 />
                                                 <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-white dark:border-gray-800 shadow-sm shrink-0">
                                                     <img src={doc.img} alt={doc.name} className="w-full h-full object-cover" />
@@ -299,11 +299,11 @@ const ContactSection = () => {
 
                                 <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-2">
                                     <p className="text-sm text-secondary dark:text-secondary-muted italic max-w-xs text-center md:text-left leading-relaxed">
-                                        We values your privacy and will respond within 24 hours.
+                                        We value your privacy and will respond as early as possible during clinic hours.
                                     </p>
 
                                     <button
-                                    onClick={handleSubmit}
+                                        onClick={handleSubmit}
                                         className="primary-gradient-btn py-4 px-10 flex items-center justify-center gap-3 text-lg font-bold shadow-xl shadow-primary/20"
                                     >
                                         Send Message

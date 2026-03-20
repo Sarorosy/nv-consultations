@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Play, Star, Award } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import navinImg from '../../assets/navin.png';
-import varshaImg from '../../assets/varsha.png';
+import varshaImg from '../../assets/varsha_square.png';
 
 const AboutSection = () => {
     const navigate = useNavigate();
@@ -51,11 +51,11 @@ const AboutSection = () => {
                             >
                                 <img
                                     src={varshaImg}
-                                    alt="Dr. Varsha"
+                                    alt="Dr. Varsha Ezhilarasu"
                                     className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500 scale-110 group-hover:scale-100"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-                                    <span className="text-white font-bold tracking-wider">DR. VARSHA</span>
+                                    <span className="text-white font-bold tracking-wider">DR. VARSHA EZHILARASU</span>
                                 </div>
                             </motion.div>
 
@@ -104,7 +104,7 @@ const AboutSection = () => {
                             </span> for Your Health
                         </h2>
                         <p className="text-lg text-secondary dark:text-gray-400 mb-8 leading-relaxed">
-                            Led by <span className="font-semibold text-primary-dark dark:text-primary-light">Dr. Navin</span> and <span className="font-semibold text-primary-dark dark:text-primary-light">Dr. Varsha</span>, our clinic is committed to providing exceptional care. We focus on evidence-based treatments and personalized attention for every patient.
+                            Led by <span className="font-semibold text-primary-dark dark:text-primary-light">Dr. Navin</span> and <span className="font-semibold text-primary-dark dark:text-primary-light">Dr. Varsha Ezhilarasu</span>, our clinic is committed to providing exceptional care. We focus on evidence-based treatments and personalized attention for every patient.
                         </p>
 
                         <div className="grid grid-cols-2 gap-6 mb-8">

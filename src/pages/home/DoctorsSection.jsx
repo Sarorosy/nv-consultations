@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star } from 'lucide-react';
 import drNavinImg from '../../assets/navin.png';
-import drVarshaImg from '../../assets/varsha.png';
+import drVarshaImg from '../../assets/varsha_square.png';
 
 const DoctorsSection = () => {
     const navigate = useNavigate();
@@ -15,7 +15,7 @@ const DoctorsSection = () => {
             rating: 5
         },
         {
-            name: "Dr. Varsha E.",
+            name: "Dr. Varsha Ezhilarasu",
             role: "Physician",
             img: drVarshaImg,
             rating: 5

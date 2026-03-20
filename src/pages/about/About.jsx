@@ -85,7 +85,7 @@ const About = () => {
         <div className="w-full bg-white dark:bg-[#0B1120] transition-colors duration-300">
             <DynamicTitle
                 title="About Us"
-                description="Learn more about NV Consultations. Led by Dr. Navin and Dr. Varsha, we provide expert diabetes care and preventive healthcare in Kolathur, Chennai."
+                description="Learn more about NV Consultations. Led by Dr. Navin and Dr. Varsha Ezhilarasu, we provide expert diabetes care and preventive healthcare in Kolathur, Chennai."
             />
 
             <PageHeader
@@ -228,7 +228,7 @@ const About = () => {
                                     She completed her MBBS from Government Chengalpattu Medical College and later pursued DNB in Anaesthesiology from MIOT Hospital, Chennai. To further strengthen her expertise in metabolic disorders, she completed CCEBDM and FCD – Fellowship in Clinical Diabetology.
                                 </p>
                                 <p>
-                                    Dr. Varsha strongly believes in a holistic approach to patient care, emphasizing lifestyle modification, preventive medicine, and patient education as key components in the management of chronic diseases.
+                                    Dr. Varsha Ezhilarasu strongly believes in a holistic approach to patient care, emphasizing lifestyle modification, preventive medicine, and patient education as key components in the management of chronic diseases.
                                 </p>
                             </div>
 

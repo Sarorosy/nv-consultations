@@ -19,7 +19,7 @@ const Footer = () => {
                             <div className="flex flex-col gap-5 text-secondary dark:text-secondary-muted text-[14px] font-semibold tracking-wide">
                                 <div className="flex items-start gap-3 hover:text-[#2AA7FF] transition-colors">
                                     <MapPin className="w-5 h-5 mt-0.5 text-[#2AA7FF] shrink-0" />
-                                    <p className="leading-relaxed">Kolathur, Chennai,<br/> Tamil Nadu 600099</p>
+                                    <p className="leading-relaxed">Kolathur, Chennai,<br /> Tamil Nadu 600099</p>
                                 </div>
                                 <div className="flex items-center gap-3 hover:text-[#2AA7FF] transition-colors">
                                     <Phone className="w-5 h-5 text-[#2AA7FF] shrink-0" />
@@ -55,13 +55,13 @@ const Footer = () => {
                                 </h4>
                                 <ul className="space-y-5 text-secondary dark:text-secondary-muted text-[13px] font-bold tracking-wide">
                                     <li className="flex flex-col gap-1">
-                                        <span className="text-primary-dark dark:text-white uppercase tracking-wider">Mon - Sat</span> 
-                                        <span className="text-gray-500 dark:text-gray-400">9:30 AM - 1:00 PM</span>
-                                        <span className="text-gray-500 dark:text-gray-400">6:00 PM - 9:00 PM</span>
+                                        <span className="text-primary-dark dark:text-white uppercase tracking-wider">Mon - Sat</span>
+                                        <span className="text-gray-500 dark:text-gray-400">9:30 AM - 1:30 PM</span>
+                                        <span className="text-gray-500 dark:text-gray-400">6:00 PM - 9:30 PM</span>
                                     </li>
                                     <li className="flex flex-col gap-1">
-                                        <span className="text-primary-dark dark:text-white uppercase tracking-wider">Sunday</span> 
-                                        <span className="text-red-500">Closed</span>
+                                        <span className="text-primary-dark dark:text-white uppercase tracking-wider">Sunday</span>
+                                        <span className="text-red-500">Available by appointment only</span>
                                     </li>
                                 </ul>
                             </div>
@@ -72,16 +72,17 @@ const Footer = () => {
                                     Find Us
                                 </h4>
                                 <div className="w-full h-[180px] rounded-xl overflow-hidden border border-primary/20 dark:border-white/10 shadow-sm">
-                                    <iframe 
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15541.516393167123!2d80.20011559495116!3d13.138473956402094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ab75791783%3A0xe5a36ebd71b0fd52!2sN.V.Consultations!5e0!3m2!1sen!2sin!4v1703223000000!5m2!1sen!2sin" 
-                                        width="100%" 
-                                        height="100%" 
-                                        style={{ border: 0 }} 
-                                        allowFullScreen="" 
-                                        loading="lazy" 
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.687557713214!2d80.2143786!3d13.118969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526577c3d9edbf%3A0x6d1f986475f15258!2sNV%20CONSULTATIONS-DR.NAVIN&#39;S%20DIABETES%20CARE!5e0!3m2!1sen!2sin!4v1773990938253!5m2!1sen!2sin"
+                                        width="100%"
+                                        height="100%"
+                                        style={{ border: 0 }}
+                                        allowFullScreen=""
+                                        loading="lazy"
                                         referrerPolicy="no-referrer-when-downgrade"
                                     ></iframe>
-                                </div>
+
+                                    </div>
                             </div>
 
                         </div>

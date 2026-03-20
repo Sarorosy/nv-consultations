@@ -17,6 +17,6 @@ export const blogs = [
         mainImage: "https://images.pexels.com/photos/17485658/pexels-photo-17485658.png",
         subImage: "https://images.pexels.com/photos/3735740/pexels-photo-3735740.jpeg",
         date: "March 12, 2024",
-        author: "Dr. Varsha"
+        author: "Dr. Varsha Ezhilarasu"
     }
 ];
