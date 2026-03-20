@@ -51,7 +51,7 @@ const Services = () => {
     const mainServices = [
         {
             title: "Diabetes Screening and Management",
-            description: "Early detection and long-term management of Type 2 diabetes, prediabetes, and uncontrolled diabetes with personalized treatment plans.",
+            description: "Early detection and long-term management of Type 1 diabetes, Type 2 diabetes, prediabetes, and uncontrolled diabetes, with individualized, patient-centered treatment plans.",
             icon: <Activity size={32} />
         },
         {
@@ -71,7 +71,7 @@ const Services = () => {
         },
         {
             title: "Diabetic Foot Care",
-            description: "Specialized evaluation and preventive care for diabetic foot problems, focusing on early detection and complication prevention.",
+            description: "Comprehensive evaluation, preventive care, treatment, and rehabilitation for diabetic foot conditions, with a focus on early detection and prevention of complications.",
             icon: <Footprints size={32} />
         },
         {
@@ -105,7 +105,7 @@ const Services = () => {
 
             <PageHeader
                 title="Our Medical Services"
-                subtitle="We provide comprehensive medical care focused on diabetes management, lifestyle disease prevention, and general physician services in Kolathur, Chennai."
+                subtitle="We provide comprehensive medical care focused on diabetes management, lifestyle disease prevention, and general physician services at 1491A, Poompuhar Nagar 7th Cross St, Kolathur, Chennai."
                 breadcrumb="Services"
             />
 

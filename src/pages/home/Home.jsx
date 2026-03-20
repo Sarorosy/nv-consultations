@@ -82,7 +82,7 @@ function Home() {
     <div className="w-full bg-white dark:bg-[#0B1120] transition-colors duration-300">
       <DynamicTitle
         title="Home"
-        description="Welcome to NV Consultations. Dr. Navin is a dedicated Diabetologist in Chennai providing expert care for diabetes, thyroid, and metabolic disorders."
+        description="Welcome to NV Consultations. Dr. Navin & Dr. Varsha are dedicated CONSULTANT PHYSICIANS & DIABETOLOGISTS in Chennai, providing expert care for diabetes, thyroid, and metabolic health management."
       />
       <Hero />
       <StatsSection />

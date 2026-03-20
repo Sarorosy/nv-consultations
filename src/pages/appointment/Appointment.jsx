@@ -40,7 +40,7 @@ const Appointment = () => {
         <div className="w-full bg-white dark:bg-[#0B1120] transition-colors duration-300">
             <DynamicTitle
                 title="Book Appointment"
-                description="Schedule your visit to NV Consultations. Expert diabetes care and preventive health consultations in Kolathur, Chennai."
+                description="Schedule your visit to NV Consultations. Expert diabetes care and preventive health consultations at 1491A, Poompuhar Nagar 7th Cross St, Kolathur, Chennai."
             />
 
             <PageHeader
@@ -64,7 +64,7 @@ const Appointment = () => {
                         </div>
                         <div className="p-8 bg-white dark:bg-[#1E293B] rounded-3xl border border-gray-100 dark:border-gray-800 shadow-sm">
                             <h4 className="font-bold text-primary mb-2 uppercase tracking-widest text-xs">Visit Us</h4>
-                            <p className="text-sm font-medium dark:text-gray-300">Kolathur, Chennai</p>
+                            <p className="text-[11px] font-medium dark:text-gray-300 leading-tight">1491A, Poompuhar Nagar 7th Cross St, Kolathur, Chennai</p>
                         </div>
                     </div>
                 </div>

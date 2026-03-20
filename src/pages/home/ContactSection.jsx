@@ -28,13 +28,13 @@ const ContactSection = () => {
     const doctors = [
         {
             name: "Dr. R. Navin",
-            role: "Diabetologist",
+            role: "CONSULTANT PHYSICIAN, DIABETOLOGIST",
             img: drNavinImg,
             bio: "Expert in comprehensive diabetes management and preventive healthcare with extensive clinical experience."
         },
         {
             name: "Dr. Varsha Ezhilarasu",
-            role: "Physician",
+            role: "CONSULTANT PHYSICIAN, DIABETOLOGIST",
             img: drVarshaImg,
             bio: "Specializes in general medicine, lifestyle counselling, and providing personalized treatments for chronic conditions."
         }
@@ -78,7 +78,7 @@ const ContactSection = () => {
                             Let's Talk About <span className="text-gradient">Your Health</span>
                         </h2>
                         <p className="text-secondary dark:text-secondary-muted mt-4 max-w-2xl mx-auto italic text-base leading-relaxed">
-                            Expert diabetes care and personalized preventive healthcare in Kolathur, Chennai.
+                            Expert diabetes care and personalized preventive healthcare at 1491A, Poompuhar Nagar 7th Cross St, North Jaganatha Nagar, Kolathur, Chennai.
                         </p>
                     </motion.div>
                 </div>
@@ -107,7 +107,8 @@ const ContactSection = () => {
                                 <div>
                                     <h4 className="text-lg font-bold text-primary-dark dark:text-white group-hover:text-primary transition-colors">Our Location</h4>
                                     <p className="text-secondary dark:text-secondary-muted text-sm leading-relaxed">
-                                        NV Consultations – Dr. Navin’s Diabetes Care, Kolathur, Chennai
+                                        NV Consultations – Dr. Navin’s Diabetes Care, <br />
+                                        1491A, Poompuhar Nagar 7th Cross St, Kolathur, Chennai
                                     </p>
                                 </div>
                             </a>

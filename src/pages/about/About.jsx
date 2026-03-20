@@ -85,12 +85,12 @@ const About = () => {
         <div className="w-full bg-white dark:bg-[#0B1120] transition-colors duration-300">
             <DynamicTitle
                 title="About Us"
-                description="Learn more about NV Consultations. Led by Dr. Navin and Dr. Varsha Ezhilarasu, we provide expert diabetes care and preventive healthcare in Kolathur, Chennai."
+                description="Learn more about NV Consultations. Led by Dr. Navin and Dr. Varsha Ezhilarasu, CONSULTANT PHYSICIANS & DIABETOLOGISTS, we provide expert diabetes care and preventive healthcare at 1491A, Poompuhar Nagar 7th Cross St, Kolathur, Chennai."
             />
 
             <PageHeader
                 title="About NV Consultations"
-                subtitle="At NV Consultations – Dr. Navin’s Diabetes Care, Kolathur, Chennai, our goal is to provide high-quality, patient-centred healthcare with a strong emphasis on diabetes management, preventive medicine, and long-term wellness."
+                subtitle="At NV Consultations – Dr. Navin’s Diabetes Care, located at 1491A, Poompuhar Nagar 7th Cross St, North Jaganatha Nagar, Kolathur, Chennai, our goal is to provide high-quality healthcare."
                 breadcrumb="About Us"
             />
 
@@ -159,11 +159,11 @@ const About = () => {
                         >
                             <h2 className="text-3xl md:text-4xl font-bold text-[#111827] dark:text-white mb-6">Dr. R. Navin</h2>
                             <p className="text-primary font-semibold mb-6 flex items-center gap-2">
-                                <GraduationCap size={20} /> Director & Consultant Diabetologist
+                                <GraduationCap size={20} /> Director, CONSULTANT PHYSICIAN, DIABETOLOGIST
                             </p>
                             <div className="space-y-4 text-secondary dark:text-gray-400 leading-relaxed">
                                 <p>
-                                    Dr. R. Navin is a dedicated Consultant Diabetologist and Director of NV Consultations, with a strong focus on comprehensive diabetes care, preventive medicine, and long-term metabolic health management.
+                                    Dr. R. Navin is a dedicated CONSULTANT PHYSICIAN, DIABETOLOGIST and Director of NV Consultations, with a strong focus on comprehensive diabetes care, preventive medicine, and long-term metabolic health management.
                                 </p>
                                 <p>
                                     He holds the Fellowship in Clinical Diabetology (FCD) from the Indian Medical Association (IMA) and advanced certifications including CCEBDM and CCGDM from the Public Health Foundation of India (PHFI). He also completed the Certificate Course in Diabetes Care from Leicester Diabetes Centre, UK.
@@ -218,11 +218,11 @@ const About = () => {
                         >
                             <h2 className="text-3xl md:text-4xl font-bold text-[#111827] dark:text-white mb-6">Dr. Varsha Ezhilarasu</h2>
                             <p className="text-primary font-semibold mb-6 flex items-center gap-2">
-                                <GraduationCap size={20} /> Co-Director, Consultant Physician & Diabetologist
+                                <GraduationCap size={20} /> Co-Director, CONSULTANT PHYSICIAN, DIABETOLOGIST
                             </p>
                             <div className="space-y-4 text-secondary dark:text-gray-400 leading-relaxed">
                                 <p>
-                                    Dr. Varsha Ezhilarasu is a Consultant Physician and Diabetologist at NV Consultations, dedicated to providing comprehensive, patient-centred medical care.
+                                    Dr. Varsha Ezhilarasu is a CONSULTANT PHYSICIAN, DIABETOLOGIST at NV Consultations, dedicated to providing comprehensive, patient-centred medical care.
                                 </p>
                                 <p>
                                     She completed her MBBS from Government Chengalpattu Medical College and later pursued DNB in Anaesthesiology from MIOT Hospital, Chennai. To further strengthen her expertise in metabolic disorders, she completed CCEBDM and FCD – Fellowship in Clinical Diabetology.
@@ -302,7 +302,7 @@ const About = () => {
                         "Our mission is to help patients achieve better health, prevent complications, and live healthier lives through evidence-based treatments and personalized care."
                     </h2>
                     <p className="text-secondary dark:text-gray-400">
-                        Patients from Kolathur and nearby areas in Chennai trust NV Consultations for reliable medical care, preventive health guidance, and long-term disease management.
+                        Patients from Poompuhar Nagar, Kolathur and nearby areas in Chennai trust NV Consultations for reliable medical care, preventive health guidance, and long-term disease management.
                     </p>
                 </div>
             </section>

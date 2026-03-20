@@ -55,7 +55,7 @@ const AboutSection = () => {
                                     className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500 scale-110 group-hover:scale-100"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-                                    <span className="text-white font-bold tracking-wider">DR. VARSHA EZHILARASU</span>
+                                    <span className="text-white font-bold tracking-wider">DR. VARSHA <br /> EZHILARASU</span>
                                 </div>
                             </motion.div>
 

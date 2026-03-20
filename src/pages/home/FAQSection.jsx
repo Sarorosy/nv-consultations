@@ -5,7 +5,7 @@ import { Plus, Minus } from 'lucide-react';
 const FAQSection = () => {
     const [openIndex, setOpenIndex] = useState(0);
     const faqs = [
-        { q: "What is NV Consultations?", a: "NV Consultations is a specialized clinic in Kolathur, Chennai, focusing on expert diabetes management, preventive healthcare, and lifestyle disease treatment led by Dr. R. Navin." },
+        { q: "What is NV Consultations?", a: "NV Consultations is a specialized clinic at 1491A, Poompuhar Nagar 7th Cross St, Kolathur, Chennai, focusing on expert diabetes management, preventive healthcare, and lifestyle disease treatment led by Dr. R. Navin." },
         { q: "When should someone visit NV Consultations?", a: "You should visit for blood sugar management, hypertension screening, thyroid evaluation, or for regular preventive health check-ups if you have a family history of metabolic diseases." },
         { q: "Does NV Consultations provide preventive health check-ups?", a: "Yes, we offer comprehensive preventive health screening programs designed for early detection of diabetes, metabolic disorders, and other lifestyle conditions." },
         { q: "Can lifestyle changes help manage diabetes?", a: "Absolutely. We emphasize lifestyle modification, diet counseling, and exercise guidance as key pillars in managing chronic diseases effectively alongside medical treatment." }

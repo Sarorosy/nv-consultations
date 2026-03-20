@@ -19,11 +19,15 @@ const Footer = () => {
                             <div className="flex flex-col gap-5 text-secondary dark:text-secondary-muted text-[14px] font-semibold tracking-wide">
                                 <div className="flex items-start gap-3 hover:text-[#2AA7FF] transition-colors">
                                     <MapPin className="w-5 h-5 mt-0.5 text-[#2AA7FF] shrink-0" />
-                                    <p className="leading-relaxed">Kolathur, Chennai,<br /> Tamil Nadu 600099</p>
+                                    <p className="leading-relaxed text-[13px]">
+                                        1491A, Poompuhar Nagar 7th Cross St, <br />
+                                        North Jaganatha Nagar, Poompuhar Nagar, <br />
+                                        Kolathur, Chennai, Tamil Nadu 600099
+                                    </p>
                                 </div>
                                 <div className="flex items-center gap-3 hover:text-[#2AA7FF] transition-colors">
                                     <Phone className="w-5 h-5 text-[#2AA7FF] shrink-0" />
-                                    <p>+91 7010972462</p>
+                                    <p>+91 8124498803</p>
                                 </div>
                                 <div className="flex items-center gap-3 hover:text-[#2AA7FF] transition-colors">
                                     <Mail className="w-5 h-5 text-[#2AA7FF] shrink-0" />
@@ -82,7 +86,7 @@ const Footer = () => {
                                         referrerPolicy="no-referrer-when-downgrade"
                                     ></iframe>
 
-                                    </div>
+                                </div>
                             </div>
 
                         </div>
@@ -135,7 +139,7 @@ const Footer = () => {
             </div>
 
             <FloatingWhatsApp
-                phoneNumber="917010972462"
+                phoneNumber="918124498803"
                 accountName="NV Consultations"
                 avatar="/ndwhite.png"
                 statusMessage="Typically replies in minutes"

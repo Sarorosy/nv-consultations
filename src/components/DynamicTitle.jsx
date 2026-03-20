@@ -2,9 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const DynamicTitle = ({ title, description }) => {
-    const baseTitle = "Dr. Navin Diabetologist | NV Consultations";
+    const baseTitle = "Dr. Navin & Dr. Varsha, CONSULTANT PHYSICIAN, DIABETOLOGIST | NV Consultations";
     const fullTitle = title ? `${title} | ${baseTitle}` : baseTitle;
-    const defaultDescription = "NV Consultations - Dr. Navin is a leading Diabetologist in Chennai, specializing in personalized diabetes care, thyroid management, and comprehensive health consultations.";
+    const defaultDescription = "NV Consultations - Dr. Navin & Dr. Varsha are leading CONSULTANT PHYSICIANS & DIABETOLOGISTS in Poompuhar Nagar, Kolathur, Chennai, specializing in personalized diabetes care, thyroid management, and comprehensive health consultations.";
 
     return (
         <Helmet>

@@ -54,7 +54,7 @@ export default function Hero() {
                                 <span className="bg-gray-200 dark:bg-gray-800 h-8 rounded-full flex items-center justify-center">
                                     <img src={capsule} alt="capsule" className="w-22 mt-3 -mt-8" />
                                 </span>
-                                <span className="text-primary">Dr. Navin</span>
+                                <span className="text-primary">Dr. Navin & Dr. Varsha</span>
                             </div>
                         </h1>
 
@@ -150,7 +150,7 @@ export default function Hero() {
                                 </div>
                                 <div>
                                     <h4 className="font-black text-[#102851] dark:text-white text-[17px] leading-tight tracking-tight">Dr. Navin</h4>
-                                    <p className="text-[11px] font-bold text-[#2AA7FF] tracking-wider uppercase mt-1">Diabetes Specialist</p>
+                                    <p className="text-[11px] font-bold text-[#2AA7FF] tracking-wider uppercase mt-1">CONSULTANT PHYSICIAN, <br/> DIABETOLOGIST</p>
                                 </div>
                             </div>
                         </motion.div>

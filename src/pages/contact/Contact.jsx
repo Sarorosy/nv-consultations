@@ -40,7 +40,7 @@ const Contact = () => {
         <div className="w-full bg-white dark:bg-[#0B1120] transition-colors duration-300">
             <DynamicTitle
                 title="Contact Us"
-                description="Contact NV Consultations in Kolathur, Chennai. Book an appointment for diabetes care, hypertension management, and preventive healthcare."
+                description="Contact NV Consultations at 1491A, Poompuhar Nagar 7th Cross St, Kolathur, Chennai. Book an appointment for diabetes care, hypertension management, and preventive healthcare."
             />
 
             <PageHeader

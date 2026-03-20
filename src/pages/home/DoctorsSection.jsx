@@ -10,13 +10,13 @@ const DoctorsSection = () => {
     const doctors = [
         {
             name: "Dr. R. Navin",
-            role: "Diabetologist",
+            role: "CONSULTANT PHYSICIAN, DIABETOLOGIST",
             img: drNavinImg,
             rating: 5
         },
         {
             name: "Dr. Varsha Ezhilarasu",
-            role: "Physician",
+            role: "CONSULTANT PHYSICIAN, DIABETOLOGIST",
             img: drVarshaImg,
             rating: 5
         }
