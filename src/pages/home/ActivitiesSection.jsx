@@ -125,7 +125,7 @@ const ActivitiesSection = ({ content = true }) => {
                                 </div>
                                 <h3 className="text-xl font-extrabold mb-3">Lipoprotein(a)</h3>
                                 <p className="text-blue-100/80 text-sm mb-6 leading-relaxed">
-                                    Discussing the critical role of Lipoprotein(a) in identifying and managing cardiovascular risks.
+                                    Reviewing the clinical importance of Lipoprotein(a) in cardiovascular risk assessment and therapeutic decision-making.
                                 </p>
                             </div>
 
@@ -167,7 +167,7 @@ const ActivitiesSection = ({ content = true }) => {
                                 </div>
                                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Diabetes Awareness Initiative</h3>
                                 <p className="text-gray-300 max-w-lg leading-relaxed">
-                                    Dr. Navin discussing regarding the various diabetes awareness initiatives what was done at Kolathur - with the Honourable Health Minister of the state - Thiru. Ma. Subramanian.
+                                    In a meeting with Honourable State Health Minister Thiru. Ma. Subramanian, Dr. Navin outlined the diabetes awareness efforts conducted in Kolathur.
                                 </p>
                             </div>
                         </div>
