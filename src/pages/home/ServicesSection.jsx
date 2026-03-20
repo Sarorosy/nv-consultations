@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ShieldCheck, HeartPulse, Laptop, ArrowRight } from 'lucide-react';
 import nurseImg from '../../assets/navin-thumbsup.png';
+import gallery3 from '../../assets/gallery/3.webp';
+import gallery4 from '../../assets/gallery/4.webp';
 import { Link } from 'react-router-dom';
 
 const ServicesSection = () => {
@@ -61,12 +63,21 @@ const ServicesSection = () => {
                         viewport={{ once: true }}
                         className="relative"
                     >
-                        <div className="rounded-[2rem] overflow-hidden shadow-xl">
-                            <img
-                                src={nurseImg}
-                                alt="Health Support"
-                                className="w-full max-h-[600px] object-cover"
-                            />
+                        <div className="grid grid-cols-12 gap-3 h-[450px] md:h-[550px]">
+                            <div className="col-span-7 h-full rounded-[2rem] overflow-hidden shadow-lg border-2 border-white dark:border-gray-800">
+                                <img
+                                    src={gallery3}
+                                    alt="Clinical Care"
+                                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                                />
+                            </div>
+                            <div className="col-span-5 h-[85%] mt-auto rounded-[2rem] overflow-hidden shadow-lg border-2 border-white dark:border-gray-800">
+                                <img
+                                    src={gallery4}
+                                    alt="Advanced Support"
+                                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                                />
+                            </div>
                         </div>
 
                         {/* Arrow button */}
